@@ -14,7 +14,7 @@ The project was split into a total of six functions and shared among members to 
 ### def crntBalance()
 * This is the blance check function tackled by [David Nii Armah Masoperh and David Gyima]
 
-### def rptTrans()
+### def atmMenu()
 * This is the function to allow the user to repeat the withdrawal process again i.e perform another transaction tackled by [Aba Apeakorang Osei]
 
 ### def rcptPrint()
