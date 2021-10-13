@@ -9,9 +9,11 @@ print ('Please enter your credentials  to login \n')
 
 
 #Database of user accounts
-userArray=[{'username':'aba', 'pin':1234, 'balance':{'GHS':1400000.00, 'USD':6800000.00} },
+userArray=[
 {'username':'akosua', 'pin':4000, 'balance':{'GHS':140, 'USD':0} },
-{'username':'eben', 'pin':5461, 'balance':{'GHS':140, 'USD':0} } ]
+{'username':'eben', 'pin':5461, 'balance':{'GHS':140, 'USD':0} },
+{'username':'bagna', 'pin':7438, 'balance':{'GHS':555000.00, 'USD':300000.00} },
+{]
 
 
         
