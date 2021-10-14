@@ -120,53 +120,74 @@ withdrawUpdate()
 
 #DNA AND SETH DAVID GYIMAH'S BAL_CHECK FUNCTION.
 
-def crntBalance():    
+def crntBalance():  #FUNCTION TO ALLOW USERS TO CHECK THEIR BALANCE.
 
-    while True:
-        try:
-             currency = int(input('\n Select preffered currency: \n(1) Ghs  \n(2) Usd...  '))
-             if currency == 1:
-                currency = 'GHS'
-                break                    
-    
-             elif currency == 2:
-                  currency = 'USD'
-                break
-             else:
-                 print('enter 1 or 2')            
-                 continue
-        except ValueError:
-              print('invalid input')
-              continue
+       
 
-    crntBalance1=loginDetails['balance'][currency]
+                
+    #username = loginDetails['username']
+    #crntBalance1=loginDetails['balance'][currency]
     
     while True:
-        Balance_check = str(input('Would you want to check your current balanct ? Y / N')).upper()
+            try:
+                Balance_check = str(input('Would you want to check your current balanct ? Y / N')).upper()
       
     
                                       
-        if Balance_check == 'Y':
-                    print (currency + str(crntBalance1))
-                    break
+                if Balance_check == 'Y':
+                                while True:
+                                        try:
+                                            currency = int(input('\n Select preffered currency: \n(1) Ghs  \n(2) Usd...  '))
+                                            if currency == 1:
+                                                currency = 'GHS'
+                                                break                    
+    
+                                            elif currency == 2:
+                                                currency = 'USD'
+                                                break
+                                            else:
+                                                 print('enter 1 or 2')            
+                                                 continue
+                                        except ValueError:
+                                              print('invalid input')
+                                              continue
 
-        elif Balance_check == 'N':
-                        while True:
-                            try:
-                                other_request = str(input('would you like to perform another transaction ? Y/N ')).upper()
-                                if other_request == 'Y':
-                                     menu()
-                                     break
+                                #print(username + ', your current balance is: ') 
+                                print(currency + str(crntBalance1)) #crntBalance1 SHOULD NOT BE PRINTED AS STR, IT SHOULD APPEAR AS INT OR FLOAT.
+                                break
 
-                                elif other_request == 'N':
-                                     print('thank you for time')
-                                     break
+                elif Balance_check == 'N':
+                            while True:
+                                    try:
+                                        other_request = str(input('Would you like to perform another transaction?  Y / N ')).upper()
+                                        if other_request == 'Y':
+                                            menu()
+                                            break
+                                            continue
 
-                                else:
-                                     print('Enter Y / N')
-                                     continue
-        elif Balance_check not in ('Y','N'):
-                           print('incorrect input ')
-                           continue
+                                        elif other_request == 'N':
+                                             print('thank you for banking with us')
+                                             quit()
+                                             
+                                         
+
+                                    #if print('Enter Y / N'):
+
+                                     
+                                         #continue
+                                        else:
+                                            print('enter Y/N')
+                                            continue
+                                        
+                                    except ValueError:
+                                            print('invalid input')
+                                            continue
+
+                else:
+                    print('Invalid Input')
+
+            except ValueError:
+                    #print('invalid Input')
+                    continue
                             
-crntBalance()    # CALLING BAL_CHECK FUNTION TO RUN.     
+crntBalance()
